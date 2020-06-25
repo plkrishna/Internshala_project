@@ -579,6 +579,7 @@ class Ui_SelectTeamWindow(object):
             ui.Bowlers_num.setText(str(0))
             ui.Allrounder_num.setText(str(0))
             ui.Wicketkeeper_num.setText(str(0))
+            ui.Team_name.setText(txt)
             ui.Db_cursor.execute('SELECT * FROM teams WHERE Name="{}";'.format(txt))
             selected_team_atts=ui.Db_cursor.fetchall()[0]
             ui.Used_points.setText(str(selected_team_atts[2]))
